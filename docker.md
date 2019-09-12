@@ -18,6 +18,9 @@
    - --rm        #当容器被停止时自动删除容器
    - -p 8888:80  #80是为容器中的tomcat设置的端口， 这里表示将80映射到宿主机8888端口， 如果只写-p 80  容器会随机取值32768~61000中较大的端口号来映射到80端口上
    - v     # 将tomcat中的usr/local/tomcat/webapps目录映射到宿主机当前目录的webapps目录，后面更新jar包直接扔到被映射的宿主机目录中即可
+   - --restart=always	Docker启动容器就启动
+   - --appendonly yes	开启持久化
+   - --network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同
    - 例子：docker run -it --rm -p 8888:8080 -v $PWD/webapps:/usr/local/tomcat/webapps tomcat:8.0[参数说明](https://blog.csdn.net/qq_31807569/article/details/90046287)
  - docker ps 查看运行中的容器
  - docker stop 容器Id 停止容器
