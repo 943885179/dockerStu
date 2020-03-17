@@ -12,3 +12,11 @@ git init 初始化
 -- git回滚到特点commit
 git reset --hard gitId --本地回滚到特点分支
 git push orgin dev --force --强制推送本地到远程orgin dev分支 --force等同于-f
+git cherry-pick  在当前分支添加其他分支的固定请求
+git log 查看日志
+git reflog 查看详细日志
+git show gitId --查看某个commit的内容
+
+ git branch -d 分支名称 --删除本地分支
+ git branch -D 分支名称 --强制删除本地分支
+ git push origin --delete bug_xzx --删除远程的bug_xzx分支
