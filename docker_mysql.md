@@ -14,5 +14,6 @@
   + 连接mysql 8提示2059 - authentication plugin 'caching_sha2_password... MySQL 版本太新造成
     - 进行mysql编辑界面`docker exec -it dockermysql bash`
     - 登录mysql `mysql -uroot -p`
-    - 修改密码 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';`
+    - 修改密码 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'newpassword';`这个newpassword是自己设置的新密码
+    - 查看数据库 `show databases;`
     - 再用navicat登录即可成功
