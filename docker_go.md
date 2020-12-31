@@ -6,6 +6,8 @@
 
 ```dockerfile
 FROM golang
+ENV GO111MODULE=on
+ENV GOPROXY=https://goproxy.io,direct
 WORKDIR $GOPATH/src/godocker
 
 ADD . $GOPATH/src/godocker
